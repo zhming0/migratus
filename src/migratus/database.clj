@@ -220,7 +220,7 @@
        t-con
        (modify-sql-fn
         (str "CREATE TABLE " table-name
-             " (id BIGINT UNIQUE NOT NULL, applied " timestamp-column-type
+             " (id BIGINT NOT NULL PRIMARY KEY, applied " timestamp-column-type
              ", description VARCHAR(1024) )"))))))
 
 (defn update-migration-table!
